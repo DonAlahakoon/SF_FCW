@@ -1,1 +1,82 @@
-<p>student-details works!</p>
+<div>
+    <h3>Student Details ID:  {{student.id}}</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="">First Name:</label>
+            </div>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="fname" [(ngModel)]="student.fname" name="fname" readonly>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="">Last Name:</label>
+            </div>
+            <div class="col-sm-10">
+               <input type="text" class="form-control" id="lname" [(ngModel)]="student.lname" name="lname" readonly>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="">Email:</label>
+            </div>
+            <div class="col-sm-10">
+               <input type="text" class="form-control" id="email" [(ngModel)]="student.email" name="email" readonly>
+            </div> 
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="">Contact No:</label>
+            </div>
+            <div class="col-sm-10">
+               <input type="text" class="form-control" id="tpNo" [(ngModel)]="student.tpNo" name="tpNo" readonly>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="">NIC/Passport no:</label>
+            </div>
+            <div class="col-sm-10">
+               <input type="text" class="form-control" id="nic" [(ngModel)]="student.nic" name="nic" readonly>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="">Username</label>
+            </div>
+            <div class="col-sm-10">
+               <input type="text" class="form-control" id="username" [(ngModel)]="student.username" name="username" readonly>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="">Password</label>
+            </div>
+            <div class="col-sm-10">
+               <input type="text" class="form-control" id="password" [(ngModel)]="student.password" name="password" readonly>
+            </div>  
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="">Degree program:</label>
+            </div>
+            <div class="col-sm-10">
+               <input type="text" class="form-control" id="degree" [(ngModel)]="student.degree" name="degree" readonly>
+            </div>
+            
+            
+        </div>
+        <div class="d-grid">
+            <button class="btn btn-success btn-block rounded-pill" type="submit">Return</button>
+        </div>
+        
+    </form>
+</div>

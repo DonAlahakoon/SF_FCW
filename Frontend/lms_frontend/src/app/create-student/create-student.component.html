@@ -1,1 +1,91 @@
-<p>create-student works!</p>
+<div>
+    <h3 class="Display-3">New Student</h3>
+    <form (ngSubmit)="onSubmit()" class="form-control bg-secondary">
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="" class="form-control">Student ID:</label>
+            </div>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="id" [(ngModel)]="student.id" name="id" >
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="" class="form-control">First Name:</label>
+            </div>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="fname" [(ngModel)]="student.fname" name="fname" >
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="" class="form-control">Last Name:</label>
+            </div>
+            <div class="col-sm-10">
+               <input type="text" class="form-control" id="lname" [(ngModel)]="student.lname" name="lname" >
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="" class="form-control">Email:</label>
+            </div>
+            <div class="col-sm-10">
+               <input type="text" class="form-control" id="email" [(ngModel)]="student.email" name="email" >
+            </div> 
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="" class="form-control">Contact No:</label>
+            </div>
+            <div class="col-sm-10">
+               <input type="text" class="form-control" id="tpNo" [(ngModel)]="student.tpNo" name="tpNo" >
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="" class="form-control">NIC/Passport no:</label>
+            </div>
+            <div class="col-sm-10">
+               <input type="text" class="form-control" id="nic" [(ngModel)]="student.nic" name="nic" >
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="" class="form-control">Username</label>
+            </div>
+            <div class="col-sm-10">
+               <input type="text" class="form-control" id="username" [(ngModel)]="student.username" name="username" >
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="" class="form-control">Password</label>
+            </div>
+            <div class="col-sm-10">
+               <input type="text" class="form-control" id="password" [(ngModel)]="student.password" name="password" >
+            </div>  
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="" class="form-control">Degree program:</label>
+            </div>
+            <div class="col-sm-10">
+               <input type="text" class="form-control" id="degree" [(ngModel)]="student.degree" name="degree" >
+            </div>
+            
+            
+        </div>
+        <div class="d-grid">
+            <button class="btn btn-primary btn-block rounded-pill" type="submit">Submit</button>
+        </div>
+        
+    </form>
+</div>

@@ -1,11 +1,11 @@
 export class Student {
 
-    id: number=0;
+    id: number|any;
     fname: string="";
     lname: string="";
     email: string="";
     nic: string="";
-    tpNo: number=0;
+    tpNo: number|any;
     username: string="";
     password: string="";
     degree: string="";
