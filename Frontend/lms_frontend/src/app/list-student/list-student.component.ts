@@ -15,7 +15,10 @@ export class ListStudentComponent implements OnInit{
   constructor(private service:StudentService,private router:Router){}
 
   ngOnInit(): void {
-    this.service.getAllStudents().subscribe((data)=>this.students=data);
+    this.getStudents();
+  }
+  private getStudents(){
+    this.service.getAllStudents().subscribe(data=>this.students=data);
   }
 
   updateStudent(id:number){
@@ -23,11 +26,17 @@ export class ListStudentComponent implements OnInit{
   }
 
   deleteStudent(id:number){
-    this.router.navigate(['delete-student',id]);
+    this.service.deleteStudent(id).subscribe(data=>{
+      console.log(data);
+      this.getStudents();
+    })
   }
 
   studentDetails(id:number){
     this.router.navigate(['student-details',id]);
+  }
+  createStudent(){
+    this.router.navigate(['create-student']);
   }
 
   

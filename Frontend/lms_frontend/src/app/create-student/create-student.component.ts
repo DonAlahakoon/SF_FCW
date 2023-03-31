@@ -26,7 +26,7 @@ export class CreateStudentComponent {
   }
 
   goToStudentList(){
-    this.router.navigate(['/students']);
+    this.router.navigate(['students']);
   }
   onSubmit(){
     console.log(this.student);

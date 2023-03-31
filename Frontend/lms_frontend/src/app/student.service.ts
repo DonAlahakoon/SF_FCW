@@ -27,6 +27,6 @@ export class StudentService {
     return this.http.put("http://localhost:7070/updateStudent/"+id,student);
   }
   public deleteStudent(id:number):Observable<Object>{
-    return this.http.delete("http://localhost:7070/deleteStudent");
+    return this.http.delete("http://localhost:7070/deleteStudent/"+id);
   }
 }
