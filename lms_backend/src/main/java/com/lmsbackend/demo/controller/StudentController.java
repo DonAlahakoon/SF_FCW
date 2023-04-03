@@ -48,6 +48,7 @@ public class StudentController {
 	public String updateStudent(@PathVariable int id,@RequestBody Student student) {
 		Student stu = stRep.findById(id).orElseThrow();
 		
+		stu.setId(student.getId());
 		stu.setFname(student.getFname());
 		stu.setLname(student.getLname());
 		stu.setEmail(student.getEmail());

@@ -22,7 +22,7 @@ export class StudentDetailsComponent implements OnInit{
 
   }
   onSubmit(){
-    this.router.navigate(['students']);
+    this.router.navigate(['admin/students']);
   }
 
 }

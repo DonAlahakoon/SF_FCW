@@ -9,6 +9,7 @@ import { StudentDetailsComponent } from './admin-dashboard/student-details/stude
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { AdminDashComponent } from './admin-dashboard/admin-dash.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 
@@ -17,7 +18,9 @@ const routes:Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
-  {path:'admin',loadChildren:()=>
+  {path:'admin',
+          canActivate:[AuthGuard],
+          loadChildren:()=>
           import('./admin-dashboard/admin.module').then((m)=> m.AdminModule),
   }
 ]
