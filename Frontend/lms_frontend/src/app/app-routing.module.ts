@@ -13,15 +13,13 @@ import { AdminDashComponent } from './admin-dashboard/admin-dash.component';
 
 
 const routes:Routes = [
-  {path:'students',component:ListStudentComponent},
+
   {path:'',redirectTo:'login',pathMatch:'full'},
-  {path:'create-student',component:CreateStudentComponent},
-  {path:'update-student/:id',component:UpdateStudentComponent},
-  {path:'delete-student/:id',component:DeleteStudentComponent},
-  {path:'student-details/:id',component:StudentDetailsComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
-  {path:'admin-dash',component:AdminDashComponent},
+  {path:'admin',loadChildren:()=>
+          import('./admin-dashboard/admin.module').then((m)=> m.AdminModule),
+  }
 ]
 
 @NgModule({

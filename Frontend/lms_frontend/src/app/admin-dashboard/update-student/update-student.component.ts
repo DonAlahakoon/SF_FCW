@@ -29,7 +29,7 @@ export class UpdateStudentComponent implements OnInit{
     error=>console.log(error));
   }
     goToStudentList(){
-      this.router.navigate(['/students']);
+      this.router.navigate(['admin']);
     }
 
 }

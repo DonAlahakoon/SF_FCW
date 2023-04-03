@@ -22,7 +22,7 @@ export class ListStudentComponent implements OnInit{
   }
 
   updateStudent(id:number){
-    this.router.navigate(['update-student',id]);
+    this.router.navigate(['admin/update-student',id]);
   }
 
   deleteStudent(id:number){
@@ -33,10 +33,10 @@ export class ListStudentComponent implements OnInit{
   }
 
   studentDetails(id:number){
-    this.router.navigate(['student-details',id]);
+    this.router.navigate(['admin/student-details',id]);
   }
   createStudent(){
-    this.router.navigate(['create-student']);
+    this.router.navigate(['admin/create-student']);
   }
 
   
