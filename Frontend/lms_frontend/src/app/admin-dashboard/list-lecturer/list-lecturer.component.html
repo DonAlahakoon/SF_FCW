@@ -1,0 +1,36 @@
+<h1>Lecturer List</h1>
+<div class="clearfix mb-3">
+    <button (click)="createLecturer()" class="btn btn-success btn-md rounded-pill float-end">New Lecturer</button>
+</div>
+
+
+<table class = "table table-striped ">
+    <thead class="table-dark">
+        <tr>
+            <th>Lecturer ID</th>
+            
+            <th>Email</th>
+            
+            <th>Username</th>
+            <th>Password</th>
+            <th>Qualification</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let lecturer of lecturers">
+            <td>{{lecturer.id}}</td>
+            
+            <td>{{lecturer.email}}</td>
+            
+            <td>{{lecturer.username}}</td>
+            <td>{{lecturer.password}}</td>
+            <td>{{lecturer.qualification}}</td>
+            <td>
+                <button (click)='updateLecturer(lecturer.id)' class="btn btn-info btn-sm rounded-pill" style="margin-left: 20px">Update</button>
+                <button  (click)='deleteLecturer(lecturer.id)' class="btn btn-danger btn-sm rounded-pill" style="margin-left: 20px">Delete</button>
+                <button  (click)='lecturerDetails(lecturer.id)' class="btn btn-warning btn-sm rounded-pill" style="margin-left: 20px">Details</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -45,11 +45,13 @@ public class LecturerController {
 		Lecturer lec = lecRep.findById(id).orElseThrow();
 		
 		lec.setFname(lecturer.getFname());
-		lec.setEmail(lecturer.getEmail());
-		lec.setUsername(lecturer.getEmail());
-		lec.setPassword(lecturer.getPassword());
 		lec.setLname(lecturer.getLname());
+		lec.setEmail(lecturer.getEmail());
+		lec.setUsername(lecturer.getUsername());
+		lec.setPassword(lecturer.getPassword());
 		lec.setQualification(lecturer.getQualification());
+		
+		lecRep.save(lec);
 		
 		return "Lecturer id: "+id+" updated successfully";
 	}

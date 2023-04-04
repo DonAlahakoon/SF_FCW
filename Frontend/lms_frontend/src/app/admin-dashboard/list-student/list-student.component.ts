@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Student } from '../../models/student';
+import { Student } from '../../models/student/student';
 import { StudentService } from '../../shared/student.service';
 import { Route, Router } from '@angular/router';
 
@@ -22,7 +22,7 @@ export class ListStudentComponent implements OnInit{
   }
 
   updateStudent(id:number){
-    this.router.navigate(['admin/update-student',id]);
+    this.router.navigate(['admin/update-student/',id]);
   }
 
   deleteStudent(id:number){
