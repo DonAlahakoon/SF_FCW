@@ -14,6 +14,8 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { AdminDashComponent } from './admin-dashboard/admin-dash.component';
 import { LecturerService } from './shared/lecturer.service';
+import { NotFoundComponent } from './shared/not-found/not-found.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -25,14 +27,16 @@ import { LecturerService } from './shared/lecturer.service';
     StudentDetailsComponent,
     LoginComponent,
     SignupComponent,
-    AdminDashComponent
+    AdminDashComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [StudentService,LecturerService],
   bootstrap: [AppComponent]
