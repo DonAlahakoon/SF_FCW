@@ -1,0 +1,26 @@
+.card{
+    
+  border-width: medium;
+  border-color: black;
+    width:500px;
+    padding:40px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgb(197, 61, 30);
+    background: linear-gradient(90deg,rgb(22, 61, 145)0%,rgb(34, 80, 198)100%);
+
+}
+
+.card h1,h6{
+    color: #fff;
+}
+
+.mb-3{
+    color: #fff;
+}
+
+body {
+    background-color: lightblue;
+  }
