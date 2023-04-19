@@ -23,13 +23,17 @@ export class UpdateStudentComponent implements OnInit{
     error => console.log(error));
   }
   onSubmit(){
+    this.updateStudent();
+    this.goToStudentList();
+  }
+  updateStudent(){
     this.service.updateStudent(this.student.id,this.student).subscribe(data=>{
-      this.goToStudentList();
+      console.log(data);
     },
     error=>console.log(error));
   }
     goToStudentList(){
-      this.router.navigate(['admin/students']);
+      this.router.navigate(['/admin/students']);
     }
 
 }

@@ -17,17 +17,18 @@ export class CreateLecturerComponent{
   saveLecturer(){
       this.service.createLecturer(this.lecturer).subscribe(data=>{
         console.log(data);
-        this.goToLecturerList();
+        
       },
       error=>console.log(error));
   }
 
   goToLecturerList(){
-    this.router.navigate(['lecturers']);
+    this.router.navigate(['admin/lecturers']);
   }
   onSubmit(){
     console.log(this.lecturer);
     this.saveLecturer();
+    this.goToLecturerList();
   }
 
   

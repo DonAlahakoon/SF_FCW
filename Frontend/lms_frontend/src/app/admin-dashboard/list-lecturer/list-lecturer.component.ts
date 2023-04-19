@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { tap } from 'rxjs';
 import { Lecturer } from 'src/app/models/lecturer/lecturer';
 import { LecturerService } from 'src/app/shared/lecturer.service';
 
@@ -16,21 +17,24 @@ export class ListLecturerComponent implements OnInit{
 
   ngOnInit(): void {
     this.getLecturers();
-    
   }
-  getLecturers(){
-    this.service.getLecturerList().subscribe(data=>this.lecturers=data);
+  getLecturers() {
+    this.service.getLecturerList().pipe(
+      tap(data => this.lecturers = data)
+    ).subscribe();
   }
 
   updateLecturer(id:String){
     this.router.navigate(['/admin/update-lecturer/',id]);
   }
-  deleteLecturer(id:String){
-    this.service.deleteLecturer(id).subscribe(data=>{
+  deleteLecturer(id: String) {
+    this.deleteLecFromDatabase(id);
+    this.getLecturers();
+  }
+  deleteLecFromDatabase(id:String){
+    this.service.deleteLecturer(id).subscribe(data =>{
       console.log(data);
-      this.getLecturers();
     })
-    
   }
   createLecturer(){
     this.router.navigate(['/admin/create-lecturer']);

@@ -26,9 +26,13 @@ export class ListStudentComponent implements OnInit{
   }
 
   deleteStudent(id:number){
+    this.deleteStudentFromDB(id);
+    this.getStudents();
+  }
+  deleteStudentFromDB(id:number){
     this.service.deleteStudent(id).subscribe(data=>{
       console.log(data);
-      this.getStudents();
+      
     })
   }
 

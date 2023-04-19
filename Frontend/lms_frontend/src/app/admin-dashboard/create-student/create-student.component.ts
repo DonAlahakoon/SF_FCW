@@ -17,20 +17,18 @@ export class CreateStudentComponent {
   saveStudent(){
     this.service.createStudent(this.student).subscribe(data=>{
       console.log(data);
-      this.goToStudentList();
     },
       error => console.log (error)
     );
-    
-
   }
 
   goToStudentList(){
-    this.router.navigate(['students']);
+    this.router.navigate(['admin/students']);
   }
   onSubmit(){
     console.log(this.student);
     this.saveStudent();
+    this.goToStudentList();
   }
 
 }

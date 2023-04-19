@@ -24,8 +24,13 @@ export class UpdateLecturerComponent implements OnInit{
   }
 
   onSubmit(){
+    this.updateLecturer();
+    this.goToLecturerList();
+    
+  }
+  updateLecturer(){
     this.service.updateLecturer(this.lecturer.id,this.lecturer).subscribe(data=>{
-      this.goToLecturerList();
+      console.log(data);
     },
     error=>console.log(error));
   }
