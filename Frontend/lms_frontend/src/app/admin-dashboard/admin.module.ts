@@ -9,6 +9,8 @@ import { ListLecturerComponent } from './list-lecturer/list-lecturer.component';
 import { LecturerDetailsComponent } from './lecturer-details/lecturer-details.component';
 import { LecturerService } from '../shared/lecturer.service';
 import { FormsModule } from '@angular/forms';
+import { CreateCourseComponent } from './create-course/create-course.component';
+import { ListCourseComponent } from './list-course/list-course.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { FormsModule } from '@angular/forms';
     CreateLecturerComponent,
     UpdateLecturerComponent,
     ListLecturerComponent,
-    LecturerDetailsComponent
+    LecturerDetailsComponent,
+    CreateCourseComponent,
+    ListCourseComponent
   ],
   imports: [
     CommonModule,

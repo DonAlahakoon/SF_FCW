@@ -10,7 +10,7 @@ import { Route, Router } from '@angular/router';
 })
 export class ListStudentComponent implements OnInit{
 
-  students:Student[]|undefined;
+  students:Student[]=[];
 
   constructor(private service:StudentService,private router:Router){}
 
@@ -30,10 +30,12 @@ export class ListStudentComponent implements OnInit{
     this.getStudents();
   }
   deleteStudentFromDB(id:number){
+    
     this.service.deleteStudent(id).subscribe(data=>{
       console.log(data);
-      
-    })
+      // Filter the students array by removing the deleted student from it
+      this.students = this.students.filter(s => s.id !== id);
+    });
   }
 
   studentDetails(id:number){

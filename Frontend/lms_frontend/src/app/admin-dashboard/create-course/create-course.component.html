@@ -1,0 +1,28 @@
+<div>
+    <h3 class="Display-3">New Course</h3>
+    <form (ngSubmit)="onSubmit()" class="form-control bg-secondary">
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="" class="form-control">Course ID:</label>
+            </div>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="id" [(ngModel)]="course.id" name="id" >
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="" class="form-control">Course Name:</label>
+            </div>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" [(ngModel)]="course.cname" name="name" >
+            </div>
+        </div>
+            
+        
+        <div class="d-grid">
+            <button class="btn btn-primary btn-block rounded-pill" type="submit">Submit</button>
+        </div>
+        
+    </form>
+</div>

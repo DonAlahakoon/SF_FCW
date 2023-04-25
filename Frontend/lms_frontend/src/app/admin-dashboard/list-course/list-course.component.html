@@ -1,0 +1,30 @@
+<h1>Course List</h1>
+<div class="clearfix mb-3">
+    <button (click)="createCourse()" class="btn btn-success btn-md rounded-pill float-end">New Course</button>
+</div>
+
+
+<table class = "table table-striped ">
+    <thead class="table-dark">
+        <tr>
+            <th>Course ID</th>
+            
+            <th>Name</th>
+            
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let course of courses">
+            <td>{{course.id}}</td>
+            
+            <td>{{course.cname}}</td>
+            
+            <td>
+                
+                <button  (click)='deleteCourse(course.id)' class="btn btn-danger btn-sm rounded-pill" style="margin-left: 20px">Delete</button>
+                
+            </td>
+        </tr>
+    </tbody>
+</table>

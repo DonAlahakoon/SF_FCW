@@ -10,6 +10,8 @@ import { ListLecturerComponent } from './list-lecturer/list-lecturer.component';
 import { CreateLecturerComponent } from './create-lecturer/create-lecturer.component';
 import { UpdateLecturerComponent } from './update-lecturer/update-lecturer.component';
 import { LecturerDetailsComponent } from './lecturer-details/lecturer-details.component';
+import { ListCourseComponent } from './list-course/list-course.component';
+import { CreateCourseComponent } from './create-course/create-course.component';
 
 const routes: Routes = [
   {path:'',component:AdminDashComponent,children:[
@@ -24,6 +26,8 @@ const routes: Routes = [
     {path:'create-lecturer',component:CreateLecturerComponent},
     {path:'update-lecturer/:id',component:UpdateLecturerComponent},
     {path:'lecturer-details/:id',component:LecturerDetailsComponent},
+    {path:'courses',component:ListCourseComponent},
+    {path:'create-course',component:CreateCourseComponent},
   ]},
   
 ];
