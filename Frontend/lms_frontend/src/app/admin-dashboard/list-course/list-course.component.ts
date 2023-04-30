@@ -22,7 +22,7 @@ export class ListCourseComponent implements OnInit{
   }
 
   createCourse(){
-    this.router.navigate(['admin/create-courses']);
+    this.router.navigate(['admin/create-course']);
   }
 
   deleteCourse(id:String){

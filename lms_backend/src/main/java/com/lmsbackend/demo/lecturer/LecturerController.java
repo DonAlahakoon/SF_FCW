@@ -44,6 +44,7 @@ public class LecturerController {
 	public String updateLecturer(@PathVariable String id,@RequestBody Lecturer lecturer) {
 		Lecturer lec = lecRep.findById(id).orElseThrow();
 		
+		lec.setId(lecturer.getId());
 		lec.setFname(lecturer.getFname());
 		lec.setLname(lecturer.getLname());
 		lec.setEmail(lecturer.getEmail());
