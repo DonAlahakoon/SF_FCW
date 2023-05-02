@@ -19,7 +19,7 @@ import com.lmsbackend.demo.repository.StudentRepository;
 
 @SpringBootApplication
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://localhost:4200", "http://localhost:4201"})
 public class StudentController {
 	@Autowired
 	public StudentRepository stRep;
